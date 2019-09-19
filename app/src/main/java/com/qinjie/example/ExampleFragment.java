@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 public class ExampleFragment extends Fragment {
 
-    protected View mView;
-
     private TextView mTextView;
 
     public static ExampleFragment newInstance(int position) {
@@ -24,20 +22,15 @@ public class ExampleFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.fragment_example, null);
-        mTextView = mView.findViewById(R.id.textview);
-        return mView;
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        View view = inflater.inflate(R.layout.fragment_example, null);
+        mTextView = view.findViewById(R.id.textview);
+        return view;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mTextView.setText("fragment" + getArguments().getInt("PARAM_POSITION"));
+        mTextView.setText("Tab" + getArguments().getInt("PARAM_POSITION"));
     }
 
 }

@@ -6,49 +6,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     tools:context="com.qinjie.example.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btn_tab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_313131"
+        android:textSize="15sp"
+        android:text="TAB_TEXT" />
 
-        <com.qinjie.pagerslidingtabstrip.PagerSlidingTabStrip
-            android:id="@+id/pagerSlidingTabStrip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:layout_centerInParent="true"
-            app:pstsIndicatorColor="@color/color_1897F2"
-            app:pstsUnderlineColor="@android:color/transparent"
-            app:pstsDividerColor="@android:color/transparent"
-            app:pstsSelectedTabTextColor="@color/color_1897F2"
-            app:pstsTabTextColor="@color/color_313131"
-            app:pstsTabBackground="@android:color/transparent"
-            app:pstsIndicatorHeight="2dp"
-            app:pstsUnderlineHeight="0dp"
-            app:pstsDividerPadding="2dp"
-            app:pstsTabPaddingLeftRight="20dp"
-            app:pstsScrollOffset="0dp"
-            app:pstsTabTextSize="16sp"
-            app:pstsShouldExpand="false"
-            app:pstsTextAllCaps="false"
-            app:pstsIndicatorinFollower="true" />
+    <Button
+        android:id="@+id/btn_tab_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_313131"
+        android:textSize="15sp"
+        android:text="TAB_ICON" />
 
-        <!--如果不写自定义属性，则必须在java代码中设置-->
-        <!--<com.qinjie.pagerslidingtabstrip.PagerSlidingTabStrip-->
-            <!--android:id="@+id/pagerSlidingTabStrip"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:paddingBottom="10dp"-->
-            <!--android:paddingTop="10dp"-->
-            <!--android:layout_centerInParent="true" />-->
-
-    </RelativeLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <Button
+        android:id="@+id/btn_tab_icon_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_313131"
+        android:textSize="15sp"
+        android:text="TAB_ICON_TEXT" />
 
 </LinearLayout>

@@ -7,13 +7,17 @@
         <attr name="pstsDividerColor" format="color" />
         <attr name="pstsSelectedTabTextColor" format="color" />
         <attr name="pstsTabTextColor" format="color" />
+        <attr name="pstsDotColor" format="color" />
         <attr name="pstsTabBackground" format="reference" />
         <attr name="pstsIndicatorHeight" format="dimension" />
         <attr name="pstsUnderlineHeight" format="dimension" />
         <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsDividerWidth" format="dimension" />
         <attr name="pstsTabPaddingLeftRight" format="dimension" />
         <attr name="pstsScrollOffset" format="dimension" />
         <attr name="pstsTabTextSize" format="dimension" />
+        <attr name="pstsPaddingTop" format="dimension" />
+        <attr name="pstsPaddingBottom" format="dimension" />
         <attr name="pstsShouldExpand" format="boolean" />
         <attr name="pstsTextAllCaps" format="boolean" />
         <attr name="pstsIndicatorinFollower" format="boolean" />

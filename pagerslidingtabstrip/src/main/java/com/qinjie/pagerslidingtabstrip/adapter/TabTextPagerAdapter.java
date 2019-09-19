@@ -1,17 +1,13 @@
-package com.qinjie.pagerslidingtabstrip;
+package com.qinjie.pagerslidingtabstrip.adapter;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import java.util.List;
+public class TabTextPagerAdapter extends FragmentPagerAdapter {
 
-public class CommonTabPagerAdapter extends FragmentPagerAdapter {
-
-    private Context mContext;
     private final int PAGE_COUNT;
-    private List<String> mList;
+    private String[] mTitles;
     private TabPagerListener mListener;
 
     public interface TabPagerListener{
@@ -22,17 +18,16 @@ public class CommonTabPagerAdapter extends FragmentPagerAdapter {
         this.mListener = listener;
     }
 
-    public CommonTabPagerAdapter(FragmentManager fm, int count, List<String> list, Context context) {
+    public TabTextPagerAdapter(FragmentManager fm, int page_count, String[] titles) {
         super(fm);
-        if (list == null || list.isEmpty()){
-            throw new ExceptionInInitializerError("list can't be null or empty");
+        if (titles == null || titles.length == 0){
+            throw new ExceptionInInitializerError("titles can't be null or empty");
         }
-        if (count <= 0){
-            throw new ExceptionInInitializerError("count value error");
+        if (page_count <= 0){
+            throw new ExceptionInInitializerError("page_count value error");
         }
-        this.PAGE_COUNT = count;
-        this.mList = list;
-        this.mContext = context;
+        this.PAGE_COUNT = page_count;
+        this.mTitles = titles;
     }
 
     @Override
@@ -47,7 +42,7 @@ public class CommonTabPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return mList.get(position);
+        return mTitles[position];
     }
 
 }
