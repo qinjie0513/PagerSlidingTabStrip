@@ -1,5 +1,11 @@
 Android 基于 PagerSlidingTabStrip 改造的自定义导航栏。完美兼容 Android 自带库和兼容库的ViewPager组件，和ViewPager配合的页面指示器。
 
+效果图
+
+![Image text](https://github.com/qinjie0513/PagerSlidingTabStrip/blob/master/app/src/main/res/drawable/pic_text.jpg)
+![Image text](https://github.com/qinjie0513/PagerSlidingTabStrip/blob/master/app/src/main/res/drawable/pic_icon.jpg)
+![Image text](https://github.com/qinjie0513/PagerSlidingTabStrip/blob/master/app/src/main/res/drawable/pic_icon_text.jpg)
+
 1.属性介绍
 
 基本属性：
