@@ -39,39 +39,6 @@ public class TabIconTextActivity extends AppCompatActivity implements TabIconTex
     }
 
     private void setTabsValue() {
-
-//        DisplayMetrics dm = getResources().getDisplayMetrics();
-//        // 设置Tab底部选中的指示器Indicator的高度
-//        mPagerSlidingTabStrip.setIndicatorHeight((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2.5f, dm));
-//        // 设置Tab底部选中的指示器 Indicator的颜色
-//        mPagerSlidingTabStrip.setIndicatorColor(Color.GREEN);
-//        //设置Tab标题文字的颜色
-//        mPagerSlidingTabStrip.setTextColor(Color.BLACK);
-//        // 设置Tab标题文字的大小
-//        mPagerSlidingTabStrip.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 16, dm));
-//        //设置Tab底部分割线的高度
-////        tabs.setUnderlineHeight(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1f, dm));
-//        //设置Tab底部分割线的颜色
-//        mPagerSlidingTabStrip.setUnderlineColor(Color.TRANSPARENT);
-//        // 设置点击某个Tab时的背景色,设置为0时取消背景色
-//        mPagerSlidingTabStrip.setTabBackground(0);
-//        // 设置Tab是自动填充满屏幕的
-//        mPagerSlidingTabStrip.setShouldExpand(true);
-//        //设置布局样式
-//        mPagerSlidingTabStrip.setIconAndText(PagerSlidingTabStrip.TABICONTEXT);
-//        //设置未选择的图标
-//        mPagerSlidingTabStrip.setNormalIconRes(mIconDefault);
-//        //设置已选择的图标
-//        mPagerSlidingTabStrip.setLightIconRes(mIconChoosed);
-//        //设置文本
-//        mPagerSlidingTabStrip.setTabTexts(mTitles);
-//        // 设置选中的Tab文字的颜色
-//        mPagerSlidingTabStrip.setSelectedTextColor(Color.GREEN);
-//        //去除tab间的分割线
-//        mPagerSlidingTabStrip.setDividerColor(Color.TRANSPARENT);
-//        //底部横线与字体宽度一致
-//        mPagerSlidingTabStrip.setIndicatorinFollower(true);
-
         DisplayMetrics dm = getResources().getDisplayMetrics();
         // 设置文字类型
         mPagerSlidingTabStrip.setTypeface(null, Typeface.NORMAL);
