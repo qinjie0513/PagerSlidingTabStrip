@@ -64,8 +64,8 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     private int dividerWidth = 1;
     private int tabPadding = 20;
     private int tabTextSize = 12;
-    private int paddingTop = 52;
-    private int paddingBottom = 52;
+    private int paddingTop = 10;
+    private int paddingBottom = 10;
     private int scrollOffset = 52;
 
     private boolean shouldExpand = false;
@@ -207,6 +207,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     }
 
     public void setViewPager(ViewPager pager) {
+
         this.pager = pager;
 
         if (pager.getAdapter() == null) {
@@ -257,7 +258,6 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
                 scrollToChild(currentPosition, 0);
             }
         });
-
     }
 
     private void addViewTab(final int position, View tab) {
@@ -386,9 +386,11 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
         if (isInEditMode() || tabCount == 0) {
             return;
         }
+
         final int height = getHeight();
         // draw indicator line
         rectPaint.setColor(indicatorColor);
@@ -406,16 +408,20 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         } else if (iconAndText == TABICON) {
             curTab = currentTab.findViewById(R.id.iv_tab_icon);
         }
+
         float lineLeft = currentTab.getLeft();
         float lineRight = currentTab.getRight();
+
         // if there is an offset, start interpolating left and right coordinates between current and next tab
         if (currentPositionOffset > 0f && currentPosition < tabCount - 1) {
             View nextTab = tabsContainer.getChildAt(currentPosition + 1);
             final float nextTabLeft = nextTab.getLeft();
             final float nextTabRight = nextTab.getRight();
+
             lineLeft = (currentPositionOffset * nextTabLeft + (1f - currentPositionOffset) * lineLeft);
             lineRight = (currentPositionOffset * nextTabRight + (1f - currentPositionOffset) * lineRight);
         }
+
         float width = 0;
         if (iconAndText == TABEMPTY) {
             if (curTab instanceof TextView) {
